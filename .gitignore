@@ -1,0 +1,7 @@
+redirect.html
+*.js
+!*min.js
+*.css
+!*min.css
+.project
+*.rar
