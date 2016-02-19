@@ -5,3 +5,4 @@ redirect.html
 !*min.css
 .project
 *.rar
+node_modules

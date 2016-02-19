@@ -70,10 +70,8 @@
 
 	<!-- article start -->
 	<article class="content-box ui-refresh" style="padding-top:44px;">
-		<div class="ui-refresh-up"></div>    <!--setup方式带有class为ui-refresh-down或ui-refresh-up的元素必须加上，用于放refresh按钮-->
+		<div class="ui-refresh-up"></div>    <!--setup方式带有class为ui-refresh-down或ui-refresh-up的元素必须加上，用于放refresh按钮-->		
 		
-		
-
 		<div class="lists-box">
 			<div class="l-banner" style="background-image: url(images/list-banner.png);">
 				<div class="l-ban-bg">
@@ -121,7 +119,7 @@
 				</div>
 
 				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="images/index_02.png" alt="" /></span>
+					<span class="l-imgbox"><img src="images/list_02.png" alt="" /></span>
 					<div class="lbox-cb">
 						<h3>Kingston 金士顿 Class10 16G TF卡（micro SD）高速单反...</h3>
 						<p><span class="now-price">¥29.90</span><em class="odd-price">¥54.00</em></p>
@@ -136,7 +134,7 @@
 			<div class="lbox" data-href="detailed.html">
 				<div class="lbox-top">
 					<!--<span class="rectangle rectangle3">03</span>-->
-					<p>24小时卖出<em>50,199</em>件 ，月销<em>206.1</em>万件</p>
+					<p><span>日销量：50,199件</span><span>月销量：206.1万件</span></p>
 				</div>
 
 				<div class="lbox-centent">
@@ -155,11 +153,11 @@
 			<div class="lbox" data-href="detailed.html">
 				<div class="lbox-top">
 					<!--<span class="rectangle">04</span>-->
-					<p>24小时卖出<em>50,199</em>件 ，月销<em>206.1</em>万件</p>
+					<p><span>日销量：50,199件</span><span>月销量：206.1万件</span></p>
 				</div>
 
 				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="images/index_02.png" alt="" /></span>
+					<span class="l-imgbox"><img src="images/list_02.png" alt="" /></span>
 					<div class="lbox-cb">
 						<h3>Kingston 金士顿 Class10 16G TF卡（micro SD）高速单反...</h3>
 						<p><span class="now-price">¥29.90</span><em class="odd-price">¥54.00</em></p>
@@ -174,11 +172,11 @@
 			<div class="lbox" data-href="detailed.html">
 				<div class="lbox-top">
 					<!--<span class="rectangle">05</span>-->
-					<p>24小时卖出<em>50,199</em>件 ，月销 <em>206.1</em>万件</p>
+					<p><span>日销量：50,199件</span><span>月销量：206.1万件</span></p>
 				</div>
 
 				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="images/index_02.png" alt="" /></span>
+					<span class="l-imgbox"><img src="images/list_02.png" alt="" /></span>
 					<div class="lbox-cb">
 						<h3>Kingston 金士顿 Class10 16G TF卡（micro SD）高速单反...</h3>
 						<p><span class="now-price">¥29.90</span><em class="odd-price">¥54.00</em></p>
@@ -318,8 +316,7 @@ $(function(){
             
 			result +=	"<div class='lbox' data-href=" +data.lists[i].link+ ">"
 							+"<div class='lbox-top'>"
-//								+"<span class='rectangle'>" +data.lists[i].No+ "</span>"
-								+"<p>24小时卖出<em>" + data.lists[i].mall + "</em>件 ，月销<em>206.1</em>万件</p>"
+								+"<p><span>日销量：" +data.lists[i].mall+ "件</span><span>月销量：206.1万件</span></p>"
 							+"</div>"
 
 							+"<div class='lbox-centent'>"
