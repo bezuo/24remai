@@ -29,7 +29,7 @@
 		<!-- /header end -->
 
 		<!-- article start -->
-		<article>
+		<article style="padding:4.4rem 0 4.8rem;">
 			<!-- t-box start -->
 			<div class="test-product">
 				<img src="images/testProduct-01.jpg" alt="" title="" />
@@ -41,13 +41,14 @@
 				<span class="fn-right t-user">测试员：尖尖</span>
 				<span class="fn-right t-user-pic"><img src="images/testProduct-02.jpg" /></span>
 				<em class="t-No">2016.02.15第一期</em>
-				<h2 class="t-tit">今日实测——保暖既美丽波司登羽绒服</h2>
 			</div>
 			<!-- /test title end -->
+			
 
+			<h2 class="t-h2">今日实测——保暖既美丽波司登羽绒服</h2>
 			<!-- content start -->
 			<section class="t-content">
-				<p>羽绒服尖尖家里只有2件，暖和倒是暖和，不过看上去就。。。(捂脸)，这几天尖尖发现了一款号称“自家做”的羽绒服，看起来十分的不错，而且好评也挺多的，价格也还始中。尖尖觉得羽绒服应该是一分钱一分货，那么这家的自制羽绒服到底好不好呢？现在天气这么冷，有意见漂亮、同事又温暖的羽绒服穿着身上真的是非常有必要呢，来看下我们的测评吧！</p>
+				<p>羽绒服尖尖家里只有2件，暖和倒是暖和，不过看上去就...(捂脸)，这几天尖尖发现了一款号称“自家做”的羽绒服，看起来十分的不错，而且好评也挺多的，价格也还始中。尖尖觉得羽绒服应该是一分钱一分货，那么这家的自制羽绒服到底好不好呢？现在天气这么冷，有意见漂亮、同事又温暖的羽绒服穿着身上真的是非常有必要呢，来看下我们的测评吧！</p>
 			</section>
 			<!-- /content end -->
 
@@ -100,15 +101,54 @@
 				<div class="t-cont-img"><img src="images/testProduct-08.jpg" alt="" title="" /></div>
 			</section>
 			<!-- /content end -->
+	
+			<section class="t-foot">
+				<em class="text-finish">完</em>
+				<p>每次开箱的商品都会用抽奖的方式送出(当然是包邮!!) </p>
+				<div class="t-foot-cont">
+					<div class="t-foot-text">
+						<p>现扫描左侧二维码就有机会获取当日实测爆品</p>
+						<p class="t-f-last">或@尖尖你想要实测的商品</p>
+					</div>
+
+					<div class="t-foot-ewm">
+						<div class="t-ewm">
+							<img src="images/ewm-web.jpg" alt="扫描微博二维码" title="微博二维码" />
+							<span>微博</span>
+						</div>
+
+						<div class="t-ewm">
+							<img src="images/ewm-web.jpg" alt="扫描微信二维码" title="微信二维码" />
+							<span>微信</span>
+						</div>
+					</div>
+				</div>
+			</section>
 		</article>
 		<!-- /article end -->
 
 		<!-- footer start -->
-		<footer class="btm-fixed buy-box">
+		<footer class="btm-fixed buy-box" style="background-color: rgb(239,239,239)">
 			<a data-url="https://item.taobao.com/item.htm?id=17870743230&amp;scm=1029.newlist-0.1.0&amp;ppath=&amp;sku=&amp;ug=#detail" id="openApp" class="fn-right">去淘宝购买</a>
 			<span>商品来源：淘宝</span>
 		</footer>
 		<!-- /footer end -->
 	</section>
+<script type="text/javascript">
+//为页面html动态设置font-size值
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        docEl.style.fontSize = clientWidth / 37.5 + 'px';
+        //等价于clientWidth / 750 * 100 + 'px';
+    };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);//resize
+    doc.addEventListener('DOMContentLoaded', recalc, false);//reload
+})(document, window);
+</script>	
 </body>
 </html>
