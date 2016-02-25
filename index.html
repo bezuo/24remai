@@ -76,13 +76,13 @@
 				</div>
 
 				<div class="hot-comm-right">
-					<div class="hot-com-r-t" data-href="lottery">
+					<div class="hot-com-r-t" data-href="lottery.html">
 						<div class="hot-img">
 							<img src="images/home_02.jpg" alt="用户抽奖" />
 						</div>
 					</div>
 
-					<div class="hot-com-r-b">
+					<div class="hot-com-r-b" data-href="firstSingle.html">
 						<div class="hot-img">
 							<img src="images/home_03.jpg" alt="首单折扣" />
 						</div>
@@ -300,6 +300,20 @@ $(function(){
 	}
 
 });
+
+//为页面html动态设置font-size值
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        docEl.style.fontSize = clientWidth / 37.5 + 'px';
+    };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);//resize
+    doc.addEventListener('DOMContentLoaded', recalc, false);//reload
+})(document, window);
 </script>
 </body>
 </html>
