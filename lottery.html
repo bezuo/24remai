@@ -15,6 +15,14 @@
 <!-- 页面模块样式 start -->
 <link type="text/css" rel="stylesheet" href="style/layout.min.css" />
 <!-- 页面模块样式 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/gmu.min.css" />
+<!-- 页面下拉加载动效 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/loading.min.css" />
+<!-- 页面下拉加载动效 end -->
 </head>
 
 <body class="max" style="background-color:rgb(243,243,243);">
@@ -71,116 +79,122 @@
 			<!-- /web end -->
 
 			<!-- award list start -->
-			<h3 class="l-h3">往期开奖</h3>
-			<section class="award">
-				<h4 class="l-h4">第五期 2016-02-19 21:20</h4>
+			<section class="ui-refresh">
+				<h3 class="l-h3">往期开奖</h3>
+				<section class="list-lottery">
+					<section class="award">
+						<h4 class="l-h4">第五期 2016-02-19 21:20</h4>
 
-				<!-- prize presentation start -->
-				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
-					<div class="lbox-cb">
-						<h3>威迪瑞180*150户外多人带绒加厚野餐垫帐篷防潮垫沙滩爬行垫</h3>
-						<p><span class="now-price">￥19.9</span><em class="odd-price">￥98.0</em></p>
-						<p><span class="source-mall">来源：亚马逊</span></p>
-					</div>
-				</div>
-				<!-- / prize presentation end -->
+						<!-- prize presentation start -->
+						<div class="lbox-centent">
+							<span class="l-imgbox"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
+							<div class="lbox-cb">
+								<h3>威迪瑞180*150户外多人带绒加厚野餐垫帐篷防潮垫沙滩爬行垫</h3>
+								<p><span class="now-price">￥19.9</span><em class="odd-price">￥98.0</em></p>
+								<p><span class="source-mall">来源：亚马逊</span></p>
+							</div>
+						</div>
+						<!-- / prize presentation end -->
 
-				<!-- exchange start -->
-				<div class="exchange">
-					<input type="text" class="l-ipt-text" placeholder="输入兑奖码" />
-					<input type="button" value="兑奖" class="l-btn-convert" />
-				</div>
-				<!-- / exchange end -->
+						<!-- exchange start -->
+						<div class="exchange">
+							<input type="text" class="l-ipt-text" placeholder="输入兑奖码" />
+							<input type="button" value="兑奖" class="l-btn-convert" />
+						</div>
+						<!-- / exchange end -->
 
-				<!-- winning record start -->
-				<div class="winning">
-					<h5>中奖名单</h5><span class="winning-span">(截止兑奖2016-02-24)</span>
-					<ul>
-						<li>
-							<span class="l-wing-img"><img src="http://www.24remai.com/backup_img/2.jpg" /></span>
-							<em class="l-wing-name">你这么大年纪活到狗身上了吧</em>
-							<span class="l-wing-status">已兑奖</span>
-							<span class="l-wing-time">2016-02-15 19:21</span>
-						</li>
-						<li>
-							<span class="l-wing-img"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
-							<em class="l-wing-name">哈里模特</em>
-							<span class="l-wing-status">已兑奖</span>
-							<span class="l-wing-time">2016-02-15 19:21</span>
-						</li>
-						<li>
-							<span class="l-wing-img"><img src="http://www.24remai.com/backup_img/2.jpg" /></span>
-							<em class="l-wing-name">生活不如意啊</em>
-							<span class="l-wing-status">已兑奖</span>
-							<span class="l-wing-time">2016-02-15 19:21</span>
-						</li>
-						<li>
-							<span class="l-wing-img"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
-							<em class="l-wing-name">一条杂技狗</em>
-							<span class="l-wing-status">未兑奖</span>
-							<span class="l-wing-time"></span>
-						</li>
-					</ul>
-				</div>
-				<!-- / winning record end -->
-			</section>
+						<!-- winning record start -->
+						<div class="winning">
+							<h5>中奖名单</h5><span class="winning-span">(截止兑奖2016-02-24)</span>
+							<ul>
+								<li>
+									<span class="l-wing-img"><img src="http://www.24remai.com/backup_img/2.jpg" /></span>
+									<em class="l-wing-name">你这么大年纪活到狗身上了吧</em>
+									<span class="l-wing-status">已兑奖</span>
+									<span class="l-wing-time">2016-02-15 19:21</span>
+								</li>
+								<li>
+									<span class="l-wing-img"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
+									<em class="l-wing-name">哈里模特</em>
+									<span class="l-wing-status">已兑奖</span>
+									<span class="l-wing-time">2016-02-15 19:21</span>
+								</li>
+								<li>
+									<span class="l-wing-img"><img src="http://www.24remai.com/backup_img/2.jpg" /></span>
+									<em class="l-wing-name">生活不如意啊</em>
+									<span class="l-wing-status">已兑奖</span>
+									<span class="l-wing-time">2016-02-15 19:21</span>
+								</li>
+								<li>
+									<span class="l-wing-img"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
+									<em class="l-wing-name">一条杂技狗</em>
+									<span class="l-wing-status">未兑奖</span>
+									<span class="l-wing-time"></span>
+								</li>
+							</ul>
+						</div>
+						<!-- / winning record end -->
+					</section>
 
-			<section class="award">
-				<h4 class="l-h4">第五期 2016-02-19 21:20</h4>
+					<section class="award">
+						<h4 class="l-h4">第五期 2016-02-19 21:20</h4>
 
-				<!-- prize presentation start -->
-				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
-					<div class="lbox-cb">
-						<h3>威迪瑞180*150户外多人带绒加厚野餐垫帐篷防潮垫沙滩爬行垫</h3>
-						<p><span class="now-price">￥19.9</span><em class="odd-price">￥98.0</em></p>
-						<p><span class="source-mall">来源：亚马逊</span></p>
-					</div>
-				</div>
-				<!-- / prize presentation end -->
+						<!-- prize presentation start -->
+						<div class="lbox-centent">
+							<span class="l-imgbox"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
+							<div class="lbox-cb">
+								<h3>威迪瑞180*150户外多人带绒加厚野餐垫帐篷防潮垫沙滩爬行垫</h3>
+								<p><span class="now-price">￥19.9</span><em class="odd-price">￥98.0</em></p>
+								<p><span class="source-mall">来源：亚马逊</span></p>
+							</div>
+						</div>
+						<!-- / prize presentation end -->
 
-				<!-- exchange start -->
-				<div class="exchange">
-					<input type="text" class="l-ipt-text" placeholder="输入兑奖码" />
-					<input type="button" value="兑奖" class="l-btn-convert" />
-				</div>
-				<!-- / exchange end -->
+						<!-- exchange start -->
+						<div class="exchange">
+							<input type="text" class="l-ipt-text" placeholder="输入兑奖码" />
+							<input type="button" value="兑奖" class="l-btn-convert" />
+						</div>
+						<!-- / exchange end -->
 
-				<!-- winning record start -->
-				<div class="winning">
-					<h5>中奖名单</h5><span class="winning-span">(截止兑奖2016-02-24)</span>
-					<ul>
-						<li>
-							<span class="l-wing-img"><img src="http://www.24remai.com/backup_img/2.jpg" /></span>
-							<em class="l-wing-name">你这么大年纪活到狗身上了吧</em>
-							<span class="l-wing-status">已兑奖</span>
-							<span class="l-wing-time">2016-02-15 19:21</span>
-						</li>
-						<li>
-							<span class="l-wing-img"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
-							<em class="l-wing-name">哈里模特</em>
-							<span class="l-wing-status">已兑奖</span>
-							<span class="l-wing-time">2016-02-15 19:21</span>
-						</li>
-						<li>
-							<span class="l-wing-img"><img src="http://www.24remai.com/backup_img/2.jpg" /></span>
-							<em class="l-wing-name">生活不如意啊</em>
-							<span class="l-wing-status">已兑奖</span>
-							<span class="l-wing-time">2016-02-15 19:21</span>
-						</li>
-						<li>
-							<span class="l-wing-img"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
-							<em class="l-wing-name">一条杂技狗</em>
-							<span class="l-wing-status">未兑奖</span>
-							<span class="l-wing-time"></span>
-						</li>
-					</ul>
-				</div>
-				<!-- / winning record end -->
+						<!-- winning record start -->
+						<div class="winning">
+							<h5>中奖名单</h5><span class="winning-span">(截止兑奖2016-02-24)</span>
+							<ul>
+								<li>
+									<span class="l-wing-img"><img src="http://www.24remai.com/backup_img/2.jpg" /></span>
+									<em class="l-wing-name">你这么大年纪活到狗身上了吧</em>
+									<span class="l-wing-status">已兑奖</span>
+									<span class="l-wing-time">2016-02-15 19:21</span>
+								</li>
+								<li>
+									<span class="l-wing-img"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
+									<em class="l-wing-name">哈里模特</em>
+									<span class="l-wing-status">已兑奖</span>
+									<span class="l-wing-time">2016-02-15 19:21</span>
+								</li>
+								<li>
+									<span class="l-wing-img"><img src="http://www.24remai.com/backup_img/2.jpg" /></span>
+									<em class="l-wing-name">生活不如意啊</em>
+									<span class="l-wing-status">已兑奖</span>
+									<span class="l-wing-time">2016-02-15 19:21</span>
+								</li>
+								<li>
+									<span class="l-wing-img"><img src="https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" /></span>
+									<em class="l-wing-name">一条杂技狗</em>
+									<span class="l-wing-status">未兑奖</span>
+									<span class="l-wing-time"></span>
+								</li>
+							</ul>
+						</div>
+						<!-- / winning record end -->
+					</section>
+				</section>
+				
+				<!--setup方式带有class为ui-refresh-down或ui-refresh-up的元素必须加上，用于放refresh按钮-->
+				<div class="ui-refresh-down"></div>
 			</section>
 			<!-- /award list end -->
-
 		</article>
 		<!-- /article end -->
 
@@ -206,6 +220,107 @@
 	</section>
 
 <script type="text/javascript" src="js/zepto.min.js"></script>
-<script type="text/javascript" src="js/base.min.js"></script>	
+<script type="text/javascript" src="js/base.min.js"></script>
+<!-- 上下拉加载组件 statr -->
+<script type="text/javascript" src="js/gmu.min.js"></script>
+<!-- 上下拉加载组件 end -->
+<script type="text/javascript">
+	$(function(){
+		
+		/*组件初始化js start*/
+		$('.ui-refresh').refresh({
+		    load: function (dir, type) {
+		        var me = this;
+		        var promptUp = $("<div class='prompt-up'>没有更多内容了</div>");
+		        var promptDown = $("<div class='prompt-down'>没有更多内容了</div>");
+
+		        // 向上拉且上一次上拉请求数据不为空, 或下拉且上一次下拉请求数据不为空 	
+		        if ($(".prompt-down").length === 0) {
+
+		        	setTimeout(function(){
+		        		// 向服务器发送一个请求, 并 
+			            $.getJSON('json/list.json', function (data) {
+				            var result = '',
+				            	list = $('.list-lottery');
+
+			            	// 对请求回来的数据进行判断是否为空
+			            	// 不为空：将请求回来的json数据拼接成字符串并将数据插入至对应的方向
+			            	// 为空：则在直接禁用相应的拉动刷新且页面上添加提示 ———— 没有更多内容了
+							if (data !== null) {
+
+				                // 判断拉动方向将拼接的数据插入
+				                list[dir == 'up' ? 'prepend' : 'append'](strList(data,result ));
+				                //数据加载完成后改变状态
+				            	me.afterDataLoading(dir);
+
+			                } else {
+					        	// 将没有更多数据友好提示添加至页面
+			        			$(".ui-refresh-down").hide().children().removeClass();
+				            	me.afterDataLoading(dir);
+					        	return dir !== 'up' ? $(".ui-refresh").append(promptUp) : $(".ui-refresh").before(promptDown);
+					        }
+					    });
+		        	},500);
+		        }
+		    }
+		});
+		/*组件初始化js end */
+
+		// 字符串拼接
+		function strList(data,result){
+			for(var i = 0; i < data.lists.length; i++){
+	            
+				result += "<section class='award'>" +
+								"<h4 class='l-h4'>第五期 2016-02-19 21:20</h4>" +
+
+								"<div class='lbox-centent'>" +
+									"<span class='l-imgbox'><img src='https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg' /></span>" +
+									"<div class='lbox-cb'>" +
+										"<h3>威迪瑞180*150户外多人带绒加厚野餐垫帐篷防潮垫沙滩爬行垫</h3>" +
+										"<p><span class='now-price'>￥19.9</span><em class='odd-price'>￥98.0</em></p>" +
+										"<p><span class='source-mall'>来源：亚马逊</span></p>" +
+									"</div>" +
+								"</div>" +
+
+								"<div class='exchange'>" +
+									"<input type='text' class='l-ipt-text' placeholder='输入兑奖码' />" +
+									"<input type='button' value='兑奖' class='l-btn-convert' />" +
+								"</div>" +
+
+								"<div class='winning'>" +
+									"<h5>中奖名单</h5><span class='winning-span'>(截止兑奖2016-02-24)</span>" +
+									"<ul>" +
+										"<li>" +
+											"<span class='l-wing-img'><img src='http://www.24remai.com/backup_img/2.jpg' /></span>" +
+											"<em class='l-wing-name'>你这么大年纪活到狗身上了吧</em>" +
+											"<span class='l-wing-status'>已兑奖</span>" +
+											"<span class='l-wing-time'>2016-02-15 19:21</span>" +
+										"</li>" +
+										"<li>" +
+											"<span class='l-wing-img'><img src='https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg' /></span>" +
+											"<em class='l-wing-name'>哈里模特</em>" +
+											"<span class='l-wing-status'>已兑奖</span>" +
+											"<span class='l-wing-time'>2016-02-15 19:21</span>" +
+										"</li>" +
+										"<li>" +
+											"<span class='l-wing-img'><img src='http://www.24remai.com/backup_img/2.jpg' /></span>" +
+											"<em class='l-wing-name'>生活不如意啊</em>" +
+											"<span class='l-wing-status'>已兑奖</span>" +
+											"<span class='l-wing-time'>2016-02-15 19:21</span>" +
+										"</li>" +
+										"<li>" +
+											"<span class='l-wing-img'><img src='https://img.alicdn.com/bao/uploaded/i4/TB1Mp.QLXXXXXXdapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg' /></span>" +
+											"<em class='l-wing-name'>一条杂技狗</em>" +
+											"<span class='l-wing-status'>未兑奖</span>" +
+											"<span class='l-wing-time'></span>" +
+										"</li>" +
+									"</ul>" +
+								"</div>" +
+							"</section>"
+	        };
+	        return result;
+		}
+	});	
+</script>	
 </body>
 </html>
