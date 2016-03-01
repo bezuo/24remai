@@ -218,7 +218,6 @@
 		</div>
 		<!-- /down end -->
 	</section>
-
 <script type="text/javascript" src="js/zepto.min.js"></script>
 <script type="text/javascript" src="js/base.min.js"></script>
 <!-- 上下拉加载组件 statr -->
@@ -320,7 +319,48 @@
 	        };
 	        return result;
 		}
-	});	
+
+		// 兑奖验证
+		$(document).on("click", ".l-btn-convert", function(){
+
+			var text_val = $(this).prev().val();
+
+			if(text_val == ""){
+
+				var content = "请输入兑奖码哦！";
+				add_maskbox(content);
+				return false;
+
+			} else {
+
+			}
+
+		});
+
+		// 提示信息
+		function add_maskbox (content) {
+			
+			var content_box = "<div class='l-error'></div>";
+
+			$("body").append("<div class='mask-box'></div>");
+			$(".mask-box").css({
+				"position": "fixed",
+				"top": 0,
+				"left": 0,
+				"zIndex": 999,
+				"width": "100%" ,
+				"height": "100%" ,
+				"backgroundColor": "rgba(0,0,0, .3)"
+			}).append(content_box);
+
+			$(".l-error").append(content);
+
+			// 关闭遮罩层与提示信息
+			setTimeout(function(){
+				$(".mask-box").remove();
+			},1500);
+		}
+	});
 </script>	
 </body>
 </html>

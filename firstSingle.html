@@ -208,8 +208,8 @@
 	        return result;
 		}
 
-		// 点击购买添加蒙版层以及跳转至APP下载页;
-		$(".lbox").on("click", function(){
+		// 点击购买添加蒙版层及跳转至APP下载页;
+		$(document).on("click", ".lbox", function(){
 
 			var error = "<div class='error-text'>首单商品为爆款达人APP专享，<br />请下载APP后进行购买，正在前往下载....</div>";
 
@@ -224,7 +224,7 @@
 				"backgroundColor": "rgba(0,0,0, .9)"
 			}).append(error);
 
-			// 将浏览器的默认的滑动事件给禁用掉
+			// 禁用浏览器默认的滑动事件
 			document.addEventListener("touchmove",function(e){
 				e.preventDefault();
 			});
