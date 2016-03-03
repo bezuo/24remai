@@ -94,13 +94,13 @@
 			<!-- nav start -->
 			<nav class="home-nav">
 				<ul>
-					<li class="cur"><a href="javascript:void(0);">今日爆款</a></li>
+					<li><a href="javascript:void(0);">今日爆款</a></li>
 					<li><a href="javascript:void(0);">销量最高</a></li>
 					<li><a href="javascript:void(0);">折扣最高</a></li>
 					<li><a href="javascript:void(0);">好评最高</a></li>
 					<li><a href="javascript:void(0);">收藏最高</a></li>
 					<li><a href="javascript:void(0);">今日爆款</a></li>
-					<li><a href="javascript:void(0);">销量最高</a></li>
+					<li class="ui-state-active"><a href="javascript:void(0);">销量最高</a></li>
 					<li><a href="javascript:void(0);">折扣最高</a></li>
 					<li><a href="javascript:void(0);">好评最高</a></li>
 					<li><a href="javascript:void(0);">收藏最高</a></li>
@@ -236,6 +236,32 @@ $(function(){
 	// 菜单栏
 	$('.home-nav').navigator();
 
+	;(function($){
+		"use strict"
+		$.fn.nav = function(options){
+			var len, strBefore,
+				$this = $(this),
+				str = "menuId=",
+				url = location.href,
+				i = url.indexOf(str);
+			
+			var getNumbenr = function() {
+				len = str.length;
+				strBefore = url.substr(i+len, 2);
+				return isNaN(strBefore) ? strBefore.substr(0, 1) : strBefore;
+			};
+
+			var setClass = function () {
+				$this.siblings().removeClass(options);
+				$this.eq(getNumbenr()-1).addClass(options);
+			};
+
+			i > -1 ? setClass() : false;
+		};
+	})(Zepto);
+	$('.home-nav li').nav("ui-state-active");
+
+
 	/*组件初始化js start*/
 	$('.ui-refresh').refresh({
 	    load: function (dir, type) {
@@ -277,28 +303,29 @@ $(function(){
 
 	// 字符串拼接
 	function strList(data,result){
-		for(var i = 0; i < data.lists.length; i++){
+		for(var i = 0, len = data.lists.length; i < len; i++){
             
-			result += "<div class='lbox' data-href=" +data.lists[i].link+ ">"
-							+"<div class='lbox-top'>"
-								+"<p><span>日销量：" +data.lists[i].mall+ "件</span><span>月销量："+data.lists[i].comment+ "件</span></p>"
-							+"</div>"
+			result+="<div class='lbox' data-href="+ data.lists[i].link +">" +
+						"<div class='lbox-top'>" +
+							"<p><span>日销量："+ data.lists[i].mall +"件</span><span>月销量："+ data.lists[i].comment +"件</span></p>" +
+						"</div>" +
 
-							+"<div class='lbox-centent'>"
-								+"<span class='l-imgbox'><img src=" +data.lists[i].pic+ " alt="+data.lists[i].title+" /></span>"
-								+"<div class='lbox-cb'>"
-									+"<h3>"+data.lists[i].title+"</h3>"
-									+"<p><span class='now-price'><i>¥</i>" +data.lists[i].price+ "</span><em class='odd-price'>¥54.00</em></p>"
-									+"<p>"
-										+"<span class='source-mall'>来源："+data.lists[i].platform+"</span>"
-									+"</p>"
-								+"</div>"
-							+"</div>"
-						+"</div>"
+						"<div class='lbox-centent'>" +
+							"<span class='l-imgbox'><img src="+ data.lists[i].pic +" alt="+ data.lists[i].title +" /></span>" +
+							"<div class='lbox-cb'>" +
+								"<h3>"+ data.lists[i].title +"</h3>" +
+								"<p><span class='now-price'><i>¥</i>"+ data.lists[i].price +"</span><em class='odd-price'>¥54.00</em></p>" +
+								"<p>" +
+									"<span class='source-mall'>来源："+ data.lists[i].platform +"</span>" +
+								"</p>" +
+							"</div>" +
+						"</div>" +
+					"</div>";
         };
         return result;
 	}
 
+	// $(".home-nav").pin();
 });
 </script>
 </body>
