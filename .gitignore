@@ -1,4 +1,5 @@
 redirect.html
+redirect1.html
 *.js
 !*min.js
 *.css

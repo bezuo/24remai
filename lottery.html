@@ -37,7 +37,7 @@
 		<!-- /header end -->
 		
 		<!-- article start -->
-		<article style="padding-top:4.4rem;">
+		<article class="article" style="padding-top:4.4rem;">
 			
 			<h2 class="l-h2">本期抽奖爆品（共10名）开奖时间 02-19 21:20</h2>
 			<section class="hot-commodity" style="padding:0;">
@@ -319,6 +319,10 @@
 	        };
 	        return result;
 		}
+
+		$(".list-top").hideElement({strKey: "#APP", element: ".article", direction:"top"})
+
+		$(".btm-down").hideElement("#APP")
 
 		// 兑奖验证
 		$(document).on("click", ".l-btn-convert", function(){

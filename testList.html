@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> <!-- 规定视口区域大小为1:1且不允许缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- IOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
+<meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
+<meta name="author" content="BeZuo">
+<title>实测商品列表</title>
+<!-- 用于浏览器默认样式重置 start -->
+<link type="text/css" rel="stylesheet" href="style/reset.min.css" />
+<!-- / 用于浏览器默认样式重置 end -->
+
+<!-- 页面模块样式 start -->
+<link type="text/css" rel="stylesheet" href="style/layout.min.css" />
+<!-- / 页面模块样式 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/gmu.min.css" />
+<!-- / 页面下拉加载动效 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/loading.min.css" />
+<!-- / 页面下拉加载动效 end -->
+</head>
+
+<body class="max" style="background-color:rgb(255,255,255);">
+	<section class="layout">
+		<!-- header start -->
+		<header class="top-fixed list-top">
+			<div class="ltop">
+				<a href="index.html" class="fn-left back1"></a>
+				<h1>每日爆款开箱实测</h1>			
+			</div>
+		</header>
+		<!-- /header end -->
+
+		<!-- article start -->
+		<article class="article" style="padding-top:4.4rem;">
+
+			<!-- 实测列表 start -->
+			<section class="ui-refresh">
+				<div class="test-list">
+					<div class="test-pro-Box" data-href="testProduct.html">
+						<div class="test-pro-img"><img src="images/testProduct-01.jpg" alt="" /></div>
+						<div class="test-pro-content">
+							<h3>保暖既美丽波司登羽绒服</h3>
+							<p><i>02.17</i>第五期</p>
+						</div>
+					</div>
+					
+					<div class="test-pro-Box" data-href="testProduct.html">
+						<div class="test-pro-img"><img src="images/testProduct-01.jpg" alt="" /></div>
+						<div class="test-pro-content">
+							<h3>保暖既美丽波司登羽绒服</h3>
+							<p><i>02.17</i>第五期</p>
+						</div>
+					</div>
+
+					<div class="test-pro-Box" data-href="testProduct.html">
+						<div class="test-pro-img"><img src="images/testProduct-01.jpg" alt="" /></div>
+						<div class="test-pro-content">
+							<h3>保暖既美丽波司登羽绒服</h3>
+							<p><i>02.17</i>第五期</p>
+						</div>
+					</div>
+				</div>
+
+				<!--setup方式带有class为ui-refresh-down或ui-refresh-up的元素必须加上，用于放refresh按钮-->
+				<div class="ui-refresh-down"></div>
+			</section>	
+			<!-- / 实测列表 end -->
+		</article>
+		<!-- /article end -->
+	</section>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<!-- 上下拉加载组件 statr -->
+<script type="text/javascript" src="js/gmu.min.js"></script>
+<!-- 上下拉加载组件 end -->
+<script type="text/javascript" src="js/base.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		/*
+		*	APP调用H5页面需要隐藏部分内容;
+		*   strKey:    表示的是当APP调用H5页时会在链接种带入参数;
+		*   element:   表示需要更改padding值的元素;(隐藏元素会导致原本的界面发生变化)
+		*   direction: 表示更改padding值的方向;
+		*   当隐藏元素不需要更改padding值时,可以hideElement("#APP");
+		*/
+		$(".list-top").hideElement({
+			strKey: "#APP",
+			element: ".article", 
+			direction: "top"
+		});
+
+
+		/*组件初始化js start*/
+		$('.ui-refresh').refresh({
+		    load: function (dir, type) {
+		        var me = this;
+		        var promptUp = $("<div class='prompt-up'>没有更多内容了</div>");
+		        var promptDown = $("<div class='prompt-down'>没有更多内容了</div>");
+
+		        // 向上拉且上一次上拉请求数据不为空, 或下拉且上一次下拉请求数据不为空 	
+		        if ($(".prompt-down").length === 0) {
+
+		        	setTimeout(function(){
+		        		// 向服务器发送一个请求, 并 
+			            $.getJSON('json/list.json', function (data) {
+				            var result = '',
+				            	list = $('.test-list');
+
+			            	// 对请求回来的数据进行判断是否为空
+			            	// 不为空：将请求回来的json数据拼接成字符串并将数据插入至对应的方向
+			            	// 为空：则在直接禁用相应的拉动刷新且页面上添加提示 ———— 没有更多内容了
+							if (data !== null) {
+
+				                // 判断拉动方向将拼接的数据插入
+				                list[dir == 'up' ? 'prepend' : 'append'](strList(data,result ));
+				                //数据加载完成后改变状态
+				            	me.afterDataLoading(dir);
+
+			                } else {
+					        	// 将没有更多数据友好提示添加至页面
+			        			$(".ui-refresh-down").hide().children().removeClass();
+				            	me.afterDataLoading(dir);
+					        	return dir !== 'up' ? $(".ui-refresh").append(promptUp) : $(".ui-refresh").before(promptDown);
+					        }
+					    });
+		        	},500);
+		        }
+		    }
+		});
+		/*组件初始化js end */
+
+		// 字符串拼接
+		function strList(data,result){
+			for(var i = 0, len = data.lists.length; i < len; i++){
+	            
+				result+="<div class='test-pro-Box' data-href='testProduct.html'>" +
+							"<div class='test-pro-img'><img src='images/testProduct-01.jpg' alt='' /></div>" +
+							"<div class='test-pro-content'>" +
+								"<h3>保暖既美丽波司登羽绒服</h3>" +
+								"<p><i>02.17</i>第五期</p>" +
+							"</div>" +
+						"</div>";
+	        };
+	        return result;
+		}
+	});
+</script>
+</body>
+</html>
