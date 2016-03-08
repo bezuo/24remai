@@ -8,6 +8,7 @@
 <meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
 <meta name="author" content="BeZuo">
 <title>实测商品列表</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
 <!-- 用于浏览器默认样式重置 start -->
 <link type="text/css" rel="stylesheet" href="style/reset.min.css" />
 <!-- / 用于浏览器默认样式重置 end -->
@@ -96,6 +97,29 @@
 			direction: "top"
 		});
 
+		// function getNowData(s) {
+		//     var curDate, date = new Date(s),
+		//     	year = date.getFullYear(),
+		//     	month = date.getMonth() + 1,
+		//     	strDate = date.getDate(),
+		//     	hour = date.getHours(),
+		//     	minute = date.getMinutes();
+		//     if (month >= 1 && month <= 9) {
+		//         month = "0" + month;
+		//     }
+		//     if (strDate >= 0 && strDate <= 9) {
+		//         strDate = "0" + strDate;
+		//     }
+		//     if(hour >= 0 && hour <= 9) {
+		//     	hour = "0" + hour;
+		//     }
+		//     if(minute >= 0 && minute <= 9) {
+		//     	minute = "0" + minute;
+		//     }
+		//     return curDate = year + "-" + month + "-" + strDate + " " + hour + ":" + minute;
+		// }
+
+		// console.log(getNowData(1457422769000));
 
 		/*组件初始化js start*/
 		$('.ui-refresh').refresh({

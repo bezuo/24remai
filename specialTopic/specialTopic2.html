@@ -220,7 +220,7 @@
 </section>
 
 <script type="text/javascript" src="../js/zepto.min.js" ></script>
-<script type="text/javascript" src="../js/base.js" ></script>
+<script type="text/javascript" src="../js/base.min.js" ></script>
 <script type="text/javascript">
 
     (function(){
@@ -231,17 +231,15 @@
         });
 
         // 二维码扫描进来隐藏返回按钮
-        var url = window.location.href;
-        if(url.indexOf('#index') == -1) {
-            $(".back1").hide();
-        }
+        $(".back1").hideElement("#index");
 
         // app打开隐藏头尾部
-        if(!(url.indexOf('#App') == -1)) {
-            $(".btm-down").hide();
-            $(".list-top").hide()
-            $(".content-box").css("paddingTop","0px");
-        }
+        $(".btm-down").hideElement("#App");        
+        $(".list-top").hideElement({
+            strKey: "#App", 
+            element: ".content-box", 
+            direction: "top"
+        });
     })();
 
     // 百度统计

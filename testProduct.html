@@ -159,10 +159,13 @@
 	<script type="text/javascript" src="js/base.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			
+						
 			$(".list-top").hideElement({strKey: "#APP", element: ".article", direction:"top"});
 
-			// $(".list-top").hideElement("#APP");
+			// 去购买跳转
+			$("#openApp").on("click",function(){
+				lodingUrl(this);
+			});
 		});
 	</script>
 </body>
