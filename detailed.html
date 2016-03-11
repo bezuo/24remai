@@ -204,10 +204,11 @@ $(function(){
 	// 商品轮播图
 	$('#slider').slider( { imgZoom: true });
 
-	// 去购买跳转
-	$("#openApp").on("click",function(){
-		lodingUrl(this);
-	});		
+	// 图片延迟加载
+	$(".imglazyload").lazyImgLoad();
+
+	// 点击去购买
+	$("#openApp").lodingUrl();
 });
 </script>
 </body>

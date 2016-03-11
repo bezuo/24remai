@@ -49,7 +49,7 @@
 				</div>
 
 				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="images/detail_01.jpg" alt="" /></span>
+					<span class="l-imgbox"><img data-url="images/detail_01.jpg" alt="" class="imglazyload" /></span>
 					<div class="lbox-cb">
 						<h3>Kingston 金士顿 Class10 16G TF卡（micro SD）高速单反...</h3>
 						<p><span class="now-price"><i>¥</i>29.90</span><em class="odd-price">¥54.00</em></p>
@@ -81,7 +81,7 @@
 				</div>
 
 				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="images/list_02.png" alt="" /></span>
+					<span class="l-imgbox"><img data-url="images/list_02.png" class="imglazyload" alt="" /></span>
 					<div class="lbox-cb">
 						<h3>Kingston 金士顿 Class10 16G TF卡（micro SD）高速单反...</h3>
 						<p><span class="now-price"><i>¥</i>29.90</span><em class="odd-price">¥54.00</em></p>
@@ -100,7 +100,7 @@
 				</div>
 
 				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="images/detail_01.jpg" alt="" /></span>
+					<span class="l-imgbox"><img data-url="images/detail_01.jpg" class="imglazyload" alt="" /></span>
 					<div class="lbox-cb">
 						<h3>Kingston 金士顿 Class10 16G TF卡（micro SD）高速单反...</h3>
 						<p><span class="now-price"><i>¥</i>29.90</span><em class="odd-price">¥54.00</em></p>
@@ -119,7 +119,7 @@
 				</div>
 
 				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="images/list_02.png" alt="" /></span>
+					<span class="l-imgbox"><img data-url="images/list_02.png" class="imglazyload" alt="" /></span>
 					<div class="lbox-cb">
 						<h3>Kingston 金士顿 Class10 16G TF卡（micro SD）高速单反...</h3>
 						<p><span class="now-price"><i>¥</i>29.90</span><em class="odd-price">¥54.00</em></p>
@@ -138,7 +138,7 @@
 				</div>
 
 				<div class="lbox-centent">
-					<span class="l-imgbox"><img src="images/list_02.png" alt="" /></span>
+					<span class="l-imgbox"><img data-url="images/list_02.png" class="imglazyload" alt="" /></span>
 					<div class="lbox-cb">
 						<h3>Kingston 金士顿 Class10 16G TF卡（micro SD）高速单反...</h3>
 						<p><span class="now-price"><i>¥</i>29.90</span><em class="odd-price">¥54.00</em></p>
@@ -226,6 +226,8 @@ $(function(){
 			                list[dir == 'up' ? 'prepend' : 'append'](strList(data,result ));
 			                //数据加载完成后改变状态
 			            	me.afterDataLoading(dir);
+			                // 图片延迟加载
+							$(".imglazyload").lazyImgLoad();
 
 		                } else {
 				        	// 将没有更多数据友好提示添加至页面
@@ -240,38 +242,6 @@ $(function(){
 	});
 	/*组件初始化js end */
 
-	/* 时间切换 start */
-	$(".date-box").on("click", "a", function(){
-
-		var promptUp = $("<div class='prompt-up'>没有更多内容了</div>");
-        var promptDown = $("<div class='prompt-down'>没有更多内容了</div>");
-
-		$(".lists-box").children().remove();
-
-		if($(".prompt-up").length > 0) {
-			$(".prompt-up").remove();
-			$(".ui-refresh-down").show();
-	    }
-
-	    $.getJSON('json/list.json', function (data) {
-			var result = '',
-            	list = $('.lists-box');
-
-        	if (data !== null) {
-
-                // 判断拉动方向将拼接的数据插入
-                $('.lists-box').append(strList(data,result ));
-
-            } else {
-	        	// 将没有更多数据友好提示添加至页面
-    			$(".ui-refresh-down").hide();
-    			$(".ui-refresh").append(promptUp);
-	        }
-
-	    });
-	});
-	/* 时间切换 end */
-
 	// 字符串拼接
 	function strList(data,result){
 		for(var i = 0; i < data.lists.length; i++){
@@ -282,13 +252,13 @@ $(function(){
 							+"</div>"
 
 							+"<div class='lbox-centent'>"
-								+"<span class='l-imgbox'><img src=" +data.lists[i].pic+ " alt="+data.lists[i].title+" /></span>"
+								+"<span class=l-imgbox><img data-url= "+data.lists[i].pic+" data-alt="+data.lists[i].title+" class=imglazyload ></span>"
 								+"<div class='lbox-cb'>"
-									+"<h3>"+data.lists[i].title+"</h3>"
-									+"<p><span class='now-price'><i>¥</i>" +data.lists[i].price+ "</span><em class='odd-price'>¥54.00</em></p>"
+									+"<h3>"+ data.lists[i].title +"</h3>"
+									+"<p><span class='now-price'><i>¥</i>"+ data.lists[i].price +"</span><em class='odd-price'>¥54.00</em></p>"
 									+"<p>"
-										+"<span class='fn-right lbox-comm'>"+data.lists[i].say+"</span>"
-										+"<span class='source-mall'>"+data.lists[i].platform+"</span>"
+										+"<span class='fn-right lbox-comm'>"+ data.lists[i].say +"</span>"
+										+"<span class='source-mall'>"+ data.lists[i].platform +"</span>"
 									+"</p>"
 								+"</div>"
 							+"</div>"
@@ -296,6 +266,10 @@ $(function(){
         };
         return result;
 	}
+
+
+	// 图片延迟加载
+	$(".imglazyload").lazyImgLoad();
 });
 </script>
 </body>

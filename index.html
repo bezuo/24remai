@@ -32,6 +32,27 @@
 <body class="max bg01">
 	<section class="layout pad-btm54">
 
+		<!-- down start -->
+		<div class="btm-down" style="position:relative;">
+			<div class="color-line">
+				<span style="background-color:rgb(60,210,233)"></span>
+				<span style="background-color:rgb(255,239,81)"></span>
+				<span style="background-color:rgb(255,180,115)"></span>
+			</div>
+
+			<a href="http://a.app.qq.com/o/simple.jsp?pkgname=hotsalehavetodo.applicaiton" class="fn-right downApp">立即下载</a>
+			<span class="close-box close-down"></span>
+			<div class="logobox">
+				<img src="images/logo.png" class="fn-left logo24" style="margin-left:0;" />
+				<hgroup>
+					<h2>爆款达人</h2>
+					<p>全网超值爆款导购</p>
+				</hgroup>
+			</div>
+		</div>
+		<!-- /down end -->
+
+
 		<!-- header start -->
 		<header class="i-top">
 			<h1><img src="images/index-logo.png"></h1>
@@ -52,19 +73,19 @@
 			<!-- activity start -->
 			<section class="hot-comm">
 				<div class="hot-comm-left" data-href="testList.html">
-					<img src="images/home_01.jpg" alt="" alt="实测商品" />
+					<img data-url="images/home_01.jpg" alt="" alt="实测商品" class="imglazyload" />
 				</div>
 
 				<div class="hot-comm-right">
 					<div class="hot-com-r-t" data-href="lottery.html">
 						<div class="hot-img">
-							<img src="images/home_02.jpg" alt="用户抽奖" />
+							<img data-url="images/home_02.jpg" alt="用户抽奖" class="imglazyload" />
 						</div>
 					</div>
 
 					<div class="hot-com-r-b" data-href="firstSingle.html">
 						<div class="hot-img">
-							<img src="images/home_03.jpg" alt="首单折扣" />
+							<img data-url="images/home_03.jpg" alt="首单折扣" class="imglazyload" />
 						</div>
 					</div>
 				</div>
@@ -94,7 +115,7 @@
 					<li data-href="detailed.html">
 						<div class="hot-comm-img">
 							<span class="hot-p-img">
-								<img src="https://img.alicdn.com/bao/uploaded/i2/T11rUCFilbXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" alt="" />
+								<img data-url="https://img.alicdn.com/bao/uploaded/i2/T11rUCFilbXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" class="imglazyload" alt="" />
 							</span>
 
 							<div class="hot-comm-content">
@@ -115,7 +136,7 @@
 					<li data-href="detailed.html">
 						<div class="hot-comm-img">
 							<span class="hot-p-img">
-								<img src="http://gd1.alicdn.com/bao/uploaded/i1/198426622/TB2oSG1kXXXXXXlXFXXXXXXXXXX_!!198426622.jpg_600x600.jpg" alt="" />
+								<img data-url="http://gd1.alicdn.com/bao/uploaded/i1/198426622/TB2oSG1kXXXXXXlXFXXXXXXXXXX_!!198426622.jpg_600x600.jpg" class="imglazyload" alt="" id="3fd" />
 							</span>
 
 							<div class="hot-comm-content">
@@ -135,7 +156,7 @@
 					<li data-href="detailed.html">
 						<div class="hot-comm-img">
 							<span class="hot-p-img">
-								<img src="http://gd4.alicdn.com/bao/uploaded/i4/1053694346/TB2xGtXkXXXXXXUXpXXXXXXXXXX_!!1053694346.jpg_600x600.jpg" alt="" />
+								<img data-url="http://gd4.alicdn.com/bao/uploaded/i4/1053694346/TB2xGtXkXXXXXXUXpXXXXXXXXXX_!!1053694346.jpg_600x600.jpg" class="imglazyload" alt="" />
 							</span>
 
 							<div class="hot-comm-content">
@@ -168,7 +189,7 @@
 						</div>
 
 						<div class="lbox-centent">
-							<span class="l-imgbox"><img src="http://gd1.alicdn.com/bao/uploaded/i1/TB18pS8KFXXXXXQXXXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg"></span>
+							<span class="l-imgbox"><img data-url="http://gd1.alicdn.com/bao/uploaded/i1/TB18pS8KFXXXXXQXXXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" class="imglazyload"/></span>
 							<div class="lbox-cb">
 								<h3>他他库防风挂钩卡扣多功能衣架内衣袜子晾晒架8夹 买2送1 买3送2 </h3>
 								<p><span class="now-price"><i>¥</i>9.9</span><em class="odd-price">¥32.0</em><span class="p-zk">7.6折</span></p>
@@ -185,7 +206,7 @@
 						</div>
 
 						<div class="lbox-centent">
-							<span class="l-imgbox"><img src="http://gd2.alicdn.com/bao/uploaded/i2/TB1tbYYIVXXXXXjXpXXXXXXXXXX_!!2-item_pic.png_600x600.jpg"></span>
+							<span class="l-imgbox"><img data-url="http://gd2.alicdn.com/bao/uploaded/i2/TB1tbYYIVXXXXXjXpXXXXXXXXXX_!!2-item_pic.png_600x600.jpg" class="imglazyload" /></span>
 							<div class="lbox-cb">
 								<h3>他他库防风挂钩卡扣多功能衣架内衣袜子晾晒架8夹 买2送1 买3送2 </h3>
 								<p><span class="now-price"><i>¥</i>9.9</span><em class="odd-price">¥32.0</em></p>
@@ -277,6 +298,10 @@ $(function(){
 			                list[dir == 'up' ? 'prepend' : 'append'](strList(data,result ));
 			                //数据加载完成后改变状态
 			            	me.afterDataLoading(dir);
+			            	$(".imglazyload").lazyImgLoad({
+								backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+								distance: "50"
+							});
 
 		                } else {
 				        	// 将没有更多数据友好提示添加至页面
@@ -301,7 +326,7 @@ $(function(){
 						"</div>" +
 
 						"<div class='lbox-centent'>" +
-							"<span class='l-imgbox'><img src="+ data.lists[i].pic +" alt="+ data.lists[i].title +" /></span>" +
+							"<span class='l-imgbox'><img data-url="+ data.lists[i].pic +" alt="+ data.lists[i].title +" class='imglazyload' /></span>" +
 							"<div class='lbox-cb'>" +
 								"<h3>"+ data.lists[i].title +"</h3>" +
 								"<p><span class='now-price'><i>¥</i>"+ data.lists[i].price +"</span><em class='odd-price'>¥54.00</em></p>" +
@@ -315,6 +340,10 @@ $(function(){
         return result;
 	}
 
+	$(".imglazyload").lazyImgLoad({
+		backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+		distance: "50"
+	});
 	// $(".home-nav").pin();
 });
 </script>
