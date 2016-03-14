@@ -7,7 +7,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
 <meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略将数字变为电话号码 -->
 <meta name="author" content="BeZuo">
-<title>24热卖</title>
+<title>商品列表</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
 <link type="text/css" rel="stylesheet" href="style/reset.min.css" />
 <link type="text/css" rel="stylesheet" href="style/layout.min.css" />
 <!-- nav模块样式 start -->
@@ -35,9 +36,13 @@
 		<div class="ui-refresh-up"></div>    <!--setup方式带有class为ui-refresh-down或ui-refresh-up的元素必须加上，用于放refresh按钮-->		
 		
 		<div class="lists-box">
-			<div class="l-banner" style="background-image: url(images/list-banner.png);">
+			<div class="l-banner">
+				<div class="columns-img">
+					<img data-url="images/list-banner.png" class="imgload" />
+				</div>
+
 				<div class="l-ban-bg">
-					<p>“最新版Kindle历史新低价，Apple Watch货源充足，”</p>
+					<p>“最新版Kindle历史新低价，Apple Watch货源充足”</p>
 				</div>
 			</div>
 
@@ -227,7 +232,10 @@ $(function(){
 			                //数据加载完成后改变状态
 			            	me.afterDataLoading(dir);
 			                // 图片延迟加载
-							$(".imglazyload").lazyImgLoad();
+							$(".imglazyload").lazyImgLoad({
+								backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+								distance: "50"
+							});
 
 		                } else {
 				        	// 将没有更多数据友好提示添加至页面
@@ -269,7 +277,15 @@ $(function(){
 
 
 	// 图片延迟加载
-	$(".imglazyload").lazyImgLoad();
+	$(".imglazyload").lazyImgLoad({
+		backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+		distance: "50"
+	});
+
+	$(".imgload").lazyImgLoad({
+		backgroundImg: "images/columns-placeholder.png",
+		distance: "50"
+	});
 });
 </script>
 </body>

@@ -7,7 +7,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
 <meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
 <meta name="author" content="BeZuo">
-<title>24热卖</title>
+<title>爆款达人</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
 <!-- 用于浏览器默认样式重置 start -->
 <link type="text/css" rel="stylesheet" href="style/reset.min.css" />
 <!-- 用于浏览器默认样式重置 end -->
@@ -74,17 +75,23 @@
 			<h2 class="hot-tit">热卖精选</h2>
 			<section class="i-list">
 				<div class="i-box">
-					<div class="i-box-top" style="background-image: url(images/i-tit-bg.png);" data-href="list.html">
-						<h3>#宿舍屯货必备</h3>
-						<span class="i-time">大冷天气宅寝室屯货过冬吧</span>
-						<div class="skewX-30"><p>今日已更新<em class='mar-lr8'>97</em>件好货</p></div>
+					<div class="i-box-top" data-href="list.html">
+						<div class="img-columns">
+							<img data-url="images/i-tit-bg.png" class="imgload" />
+						</div>
+
+						<div class="columns-content">
+							<h3>#宿舍屯货必备</h3>
+							<span class="i-time">大冷天气宅寝室屯货过冬吧</span>
+							<div class="skewX-30"><p>今日已更新<em class='mar-lr8'>97</em>件好货</p></div>
+						</div>
 					</div>
 
 					<div class="i-box-cont swiper-container">
 						<div class="swiper-wrapper">
 							<a class="i-box-comm swiper-slide" href="detailed.html">
 								<div class="i-box-img">
-									<img data-url="https://img.alicdn.com/bao/uploaded/i4/TB1LTd9JFXXXXcaXVXXXXXXXXXX_!!0-item_pic.jpg_b.jpg" class="imglazyload" alt="" />
+									<img data-url="https://img.alicdn.com/bao/uploaded/i4/TB1LTd9JFXXXXcaXVXXXXXXXXXX_!!0-item_pic.jpg_b.jpg" class="imgload" alt="" />
 								</div>
 								<p>秋冬装新品韩版宽松显瘦中长款连衣裙女时尚加厚长袖针织打底裙子</p>
 								<em>￥29.90</em>	
@@ -194,9 +201,15 @@ $(function () {
 			            for(var i = 0; i < data.lists.length; i++){
 			               	result += 	"<div class='i-box'>"
 											+"<div class='i-box-top' style='background-image: url(images/i-tit-bg.png);' data-href='list.html'>"
-												+"<h3>#宿舍屯货必备</h3>"
-												+"<span class='i-time'>大冷天气宅寝室屯货过冬吧</span>"
-												+"<div class='skewX-30'><p>今日已更新<em class='mar-lr8'>97</em>件好货</p></div>"
+												+"<div class='img-columns'>"
+													+"<img data-url='images/i-tit-bg.png' class='imgload' />"
+												+"</div>"
+												
+												+"<div class='columns-content'>"
+													+"<h3>#宿舍屯货必备</h3>"
+													+"<span class='i-time'>大冷天气宅寝室屯货过冬吧</span>"
+													+"<div class='skewX-30'><p>今日已更新<em class='mar-lr8'>97</em>件好货</p></div>"
+												+"</div>"
 											+"</div>"
 
 											+"<div class='i-box-cont swiper-container'>"
@@ -259,7 +272,17 @@ $(function () {
 
 			            list[dir == 'up' ? 'prepend' : 'append'](result);
 		            	me.afterDataLoading(dir);    //数据加载完成后改变状态
-		            	$(".imglazyload").lazyImgLoad();
+		            	// 图片延迟加载
+						$(".imglazyload").lazyImgLoad({
+							backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+							distance: "50"
+						});
+
+						$(".imgload").lazyImgLoad({
+							backgroundImg: "images/columns-placeholder.png",
+							distance: "50"
+						});
+						
 		            	swiper();
 			        } else {
 			        	// 当没有请求到数据
@@ -276,7 +299,15 @@ $(function () {
 	/*组件初始化js end*/
 
 	// 图片延迟加载
-	$(".imglazyload").lazyImgLoad();
+	$(".imglazyload").lazyImgLoad({
+		backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+		distance: "50"
+	});
+
+	$(".imgload").lazyImgLoad({
+		backgroundImg: "images/columns-placeholder.png",
+		distance: "50"
+	});
 });
 </script>
 </body>

@@ -8,6 +8,7 @@
 <meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
 <meta name="author" content="BeZuo">
 <title>转发抽奖</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
 <!-- 用于浏览器默认样式重置 start -->
 <link type="text/css" rel="stylesheet" href="style/reset.min.css" />
 <!-- 用于浏览器默认样式重置 end -->
@@ -44,7 +45,9 @@
 				<ul>
 					<li style="margin:0;">
 						<div class="hot-comm-img">
-							<img src="images/home-04.jpg" alt="" />
+							<span class="hot-p-img">
+								<img data-url="https://img.alicdn.com/bao/uploaded/i2/T11rUCFilbXXXXXXXX_!!0-item_pic.jpg_600x600.jpg" alt="" class="imglazyload" />
+							</span>
 							<div class="hot-comm-content">
 								<span class="fn-right">来源：亚马逊</span>
 								<i>日销量: 31129件</i>
@@ -251,6 +254,12 @@
 				                list[dir == 'up' ? 'prepend' : 'append'](strList(data,result ));
 				                //数据加载完成后改变状态
 				            	me.afterDataLoading(dir);
+				            	
+				            	// 图片延迟加载
+								$(".imglazyload").lazyImgLoad({
+									backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+									distance: "50"
+								});
 
 			                } else {
 					        	// 将没有更多数据友好提示添加至页面
@@ -364,6 +373,12 @@
 				$(".mask-box").remove();
 			},1500);
 		}
+
+		// 图片延迟加载
+		$(".imglazyload").lazyImgLoad({
+			backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+			distance: "50"
+		});
 	});
 </script>	
 </body>
