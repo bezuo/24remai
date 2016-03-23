@@ -38,7 +38,7 @@
 		<!-- /header end -->
 
 		<!-- article start -->
-		<article class="article" style="padding-top:4.4rem;">
+		<article class="article" style="padding: 4.4rem 0 4.9rem;">
 
 			<!-- 实测列表 start -->
 			<section class="ui-refresh">
@@ -80,6 +80,15 @@
 			<!-- / 实测列表 end -->
 		</article>
 		<!-- /article end -->
+
+		<!-- footer start -->
+		<footer class="footer btm-fixed">
+			<a href="index.html" class="icon-home">今日爆款</a>
+			<a href="choice.html" class="icon-choice">分类精选</a>
+			<a href="testList.html" class="icon-box-active">爆款开箱</a>
+			<a href="order.html" class="icon-order">我的订单</a>
+		</footer>
+		<!-- /footer end -->
 	</section>
 
 <script type="text/javascript" src="js/zepto.min.js"></script>
@@ -170,13 +179,15 @@
 		function strList(data,result){
 			for(var i = 0, len = data.lists.length; i < len; i++){
 	            
-				result+="<div class='test-pro-Box' data-href='testProduct.html'>" +
-							"<div class='test-pro-img'><img src='images/testProduct-01.jpg' alt='' /></div>" +
-							"<div class='test-pro-content'>" +
-								"<h3>保暖既美丽波司登羽绒服</h3>" +
-								"<p><i>02.17</i>第五期</p>" +
-							"</div>" +
-						"</div>";
+				result += "<div class='test-pro-Box' data-href='testProduct.html'>";
+				result += "<div class='test-pro-img'>";
+				result += "<span class='img-placeHolder'><img src='images/testProduct-01.jpg' /></span>";
+				result += "</div>";
+				result += "<div class='test-pro-content'>";
+				result += "<h3>保暖既美丽波司登羽绒服</h3>";
+				result += "<p><i>02.17</i>第五期</p>";
+				result += "</div>";
+				result += "</div>";
 	        };
 	        return result;
 		}
