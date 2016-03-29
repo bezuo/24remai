@@ -61,7 +61,7 @@
 								<div class="f-list-box-btm">
 									<span class="now-price"><i>¥</i>19.9</span><i class="color-text1">立省</i>
 									<em class="color-text">¥19.5</em>
-									<p><span class="free-shipping">#包邮</span><span class="color-text">#快速购买</span></p>
+									<p><span class="free-shipping"><span class="font10">#</span>包邮</span><span class="color-text"><span class="font10">#</span>快速购买</span></p>
 								</div>
 							</div>
 						</div>								
@@ -79,7 +79,7 @@
 								<div class="f-list-box-btm">
 									<span class="now-price"><i>¥</i>19.9</span><i class="color-text1">立省</i>
 									<em class="color-text">¥19.5</em>
-									<p><span class="free-shipping">#包邮</span><span class="color-text">#快速购买</span></p>
+									<p><span class="free-shipping"><span class="font10">#</span>包邮</span><span class="color-text"><span class="font10">#</span>快速购买</span></p>
 								</div>
 							</div>
 						</div>
@@ -97,7 +97,7 @@
 								<div class="f-list-box-btm">
 									<span class="now-price"><i>¥</i>19.9</span><i class="color-text1">立省</i>
 									<em class="color-text">¥19.5</em>
-									<p><span class="free-shipping">#包邮</span><span class="color-text">#快速购买</span></p>
+									<p><span class="free-shipping"><span class="font10">#</span>包邮</span><span class="color-text"><span class="font10">#</span>快速购买</span></p>
 								</div>
 							</div>
 						</div>
@@ -196,7 +196,7 @@
 										"<div class='f-list-box-btm'>" +
 											"<span class='now-price'><i>¥</i>19.9</span><i class='color-text1'>立省</i>"+
 											"<em class='color-text'>¥19.5</em>" +
-											"<p><span class='free-shipping'>#包邮</span><span class='color-text'>#快速购买</span></p>" +
+											"<p><span class='free-shipping'><span class='font10'>#</span>包邮</span><span class='color-text'><span class='font10'>#</span>快速购买</span></p>" +
 										"</div>"+
 									"</div>" +
 								"</div>" +
@@ -206,9 +206,12 @@
 		}
 
 		// 点击购买添加蒙版层及跳转至APP下载页;
+		
+		
+
 		$(document).on("click", ".lbox", function(){
 
-			var error = "<div class='error-text'>首单商品为爆款达人APP专享，<br />请下载APP后进行购买，正在前往下载....</div>";
+			var error = "<div class='error-text'></div>";
 
 			$("body").append("<div class='mask-box'></div>");
 			$(".mask-box").css({

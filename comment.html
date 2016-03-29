@@ -23,7 +23,7 @@
 	<!-- /header end -->
 
 	<!-- article start -->
-	<article class="content-box" style="padding: 44px 0 49px;">
+	<article class="content-box" style="padding: 4.4rem 0 4.9rem;">
 		<div class="de-cont-top">
 			<p><em>8922</em>条 <i>好评率<em>92%</em></i></p>
 			<ul class="fn-clear ">
@@ -43,17 +43,18 @@
 				<div class="star-box">
 					<span class="fn-right">2015.10.7</span>
 					<em>zh**an</em>
-					<!-- <i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star"></i> -->
 				</div>
 				<p>吉祥年的品牌还是不错的，而且这次折扣给力，除了月饼还有红酒，礼盒包装看着也比较高端，送人不错。但是红酒的质量比较一般，超市价格也就十几…</p>
 				<div class="fn-clear de-cont-pic">
-					<span class="fn-left"><img src="images/detail_01.jpg" alt="" /></span>
-					<span class="fn-left"><img src="images/detail_01.jpg" alt="" /></span>
-					<span class="fn-left"><img src="images/detail_01.jpg" alt="" /></span>
+					<span class="fn-left">
+						<img data-url="images/detail_01.jpg" data-alt="" class="imglazyload" />
+					</span>
+					<span class="fn-left">
+						<img data-url="images/detail_01.jpg" data-alt="" class="imglazyload" />
+					</span>
+					<span class="fn-left">
+						<img data-url="images/detail_01.jpg" data-alt="" class="imglazyload" />
+					</span>
 				</div>
 			</div>
 			
@@ -61,11 +62,6 @@
 				<div class="star-box">
 					<span class="fn-right">2015.10.7</span>
 					<em>2755**@qq.com</em>
-					<!-- <i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star"></i> -->
 				</div>
 				<p>月饼好吃，包装好看！赞！</p>
 			</div>
@@ -74,11 +70,6 @@
 				<div class="star-box">
 					<span class="fn-right">2015.10.7</span>
 					<em>王*锤 </em>
-					<!-- <i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star"></i> -->
 				</div>
 				<p>吉祥年月饼的品牌还是有保证的，皮薄馅靓用料十足，礼盒包装送礼也有面子。</p>
 			</div>
@@ -87,11 +78,6 @@
 				<div class="star-box">
 					<span class="fn-right">2015.10.7</span>
 					<em>zh**an</em>
-					<!-- <i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star"></i> -->
 				</div>
 				<p>吉祥年的品牌还是不错的，而且这次折扣给力，除了月饼还有红酒，礼盒包装看着也比较高端，送人不错。但是红酒的质量比较一般，超市价格也就十几…</p>
 				<div class="fn-clear de-cont-pic">
@@ -104,11 +90,6 @@
 				<div class="star-box">
 					<span class="fn-right">2015.10.7</span>
 					<em>2755**@qq.com</em>
-					<!-- <i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star"></i> -->
 				</div>
 				<p>月饼好吃，包装好看！赞！</p>
 			</div>
@@ -117,11 +98,6 @@
 				<div class="star-box">
 					<span class="fn-right">2015.10.7</span>
 					<em>王*锤 </em>
-					<!-- <i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star-active"></i>
-					<i class="fn-left icon-star"></i> -->
 				</div>
 				<p>吉祥年月饼的品牌还是有保证的，皮薄馅靓用料十足，礼盒包装送礼也有面子。</p>
 			</div>
@@ -134,16 +110,24 @@
 	
 	<!-- footer start -->
 	<footer class="btm-fixed buy-box">
-		<a href="https://item.taobao.com/item.htm?spm=a21cv.7771689.19758.1.rBUrOq&id=523169448513" id="openApp" class="fn-right">去购买</a>
-		<span>商品来源：亚马逊</span>
+		<a data-url="http://item.taobao.com/item.htm?id=525810644802" class="fn-right btn-buy2" id="openApp">去天猫看看</a>
+		<a data-url="https://wap.koudaitong.com/v2/goods/2fp35ne6svnpy?showsku=true" class="btn-buy1" id="fastBuy">快速购买</a>
 	</footer>
 	<!-- /footer end -->
 </section>
 <script type="text/javascript" src="js/zepto.min.js" ></script>
 <script type="text/javascript" src="js/base.min.js" ></script>
 <script type="text/javascript">
-	$("#openApp").on("tap",function(){
-	    	lodingUrl(this);
+	// 图片延迟加载
+	$(".imglazyload").lazyImgLoad();
+
+	// 点击去购买
+	$("#openApp").lodingUrl();
+
+	// 快速购买
+	$("#fastBuy").tips({
+		content: "正在跳转，个别商品可能出现缺货，请支付后保持手机畅通",
+		btnText: "我知道了"
 	});
 </script>
 </body>

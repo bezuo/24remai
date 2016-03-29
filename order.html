@@ -27,13 +27,13 @@
 		<article style="padding: 4.4rem 0 5rem;">
 			<ul class="inquire">
 				<li>
-					<a href="#" class="icons-youzan">
+					<a href="https://wap.koudaitong.com/v2/usercenter/1axot8qlx?reft=1458895131668&spm=h15245245" class="icons-youzan">
 						<em>快速购买订单查询</em>
 					</a>
 				</li>
 
 				<li>
-					<a href="https://h5.m.taobao.com/mlapp/olist.html?spm=a2141.7756461.2.6"class="icons-taobao">
+					<a data-url="https://h5.m.taobao.com/mlapp/olist.html?spm=a2141.7756461.2.6"class="icons-taobao" id="openApp">
 						<em>淘宝/天猫订单查询</em>
 					</a>
 				</li>
@@ -56,7 +56,11 @@
 		</footer>
 		<!-- /footer end -->
 	</section>
-<script type="text/javascript" src="zepto.min.js"></script>
-<script type="text/javascript" src="base.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/base.min.js"></script>
+<script type="text/javascript">
+	// 查看淘宝订单
+	$("#openApp").lodingUrl();
+</script>
 </body>
 </html>
